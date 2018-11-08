@@ -1,0 +1,9 @@
+
+/* Class = "UIBarButtonItem"; title = "Exit"; ObjectID = "95T-75-wP5"; */
+"95T-75-wP5.title" = "終了";
+
+/* Class = "UINavigationItem"; title = "Select Text"; ObjectID = "E6Q-jS-rnz"; */
+"E6Q-jS-rnz.title" = "テキストを選択";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "Sk2-dh-fad"; */
+"Sk2-dh-fad.title" = "Title";

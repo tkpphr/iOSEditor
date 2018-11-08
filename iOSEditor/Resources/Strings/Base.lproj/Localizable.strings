@@ -1,0 +1,12 @@
+//Copyright (c) 2018-present tkpphr. All rights reserved.
+"hint_enter_file_name" = "Enter file name.";
+"hint_save" = "This file name is already exists.\nFile will be overwritten.";
+"hint_save_as" = "File will be created newly.";
+"save" = "Save";
+"dont_save" = "Don't Save";
+"cancel" = "Cancel";
+"exit" = "Exit";
+"yes" = "Yes";
+"no" = "No";
+"message_exit" = "Are you sure you want to exit?";
+"message_exit_with_data_changed" = "Data has been changed.\nDo you want to save it?";

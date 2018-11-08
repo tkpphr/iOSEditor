@@ -1,0 +1,12 @@
+//Copyright (c) 2018-present tkpphr. All rights reserved.
+"hint_enter_file_name" = "ファイル名を入力してください。";
+"hint_save" = "このファイル名は既に存在します。\nファイルは上書きされます。";
+"hint_save_as" = "ファイルは新規作成されます。";
+"save" = "保存する";
+"dont_save" = "保存しない";
+"cancel" = "キャンセル";
+"exit" = "終了";
+"yes" = "はい";
+"no" = "いいえ";
+"message_exit" = "終了してもよろしいですか?";
+"message_exit_with_data_changed" = "データが変更されています。\n変更内容を保存しますか?";

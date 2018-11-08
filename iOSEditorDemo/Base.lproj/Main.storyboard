@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="iOSEditorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFg-rW-PTX">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Select Text" id="E6Q-jS-rnz">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="h8v-9A-M4J">
+                                            <connections>
+                                                <action selector="addButtonTapped:" destination="BYZ-38-t0r" id="dMQ-nf-UKF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tST-0v-Na1">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tST-0v-Na1" firstAttribute="top" secondItem="TFg-rW-PTX" secondAttribute="bottom" id="0jg-gU-1QU"/>
+                            <constraint firstItem="TFg-rW-PTX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8u3-Vi-AsB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tST-0v-Na1" secondAttribute="bottom" id="Dis-qz-TUB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tST-0v-Na1" secondAttribute="trailing" id="H6m-1s-Oip"/>
+                            <constraint firstItem="tST-0v-Na1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ucl-T5-yeC"/>
+                            <constraint firstItem="TFg-rW-PTX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fjA-xf-lv8"/>
+                            <constraint firstItem="TFg-rW-PTX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vEI-TU-oWG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="h8v-9A-M4J" id="ER2-wv-Hmc"/>
+                        <outlet property="navigationBar" destination="TFg-rW-PTX" id="JsE-tE-xe4"/>
+                        <outlet property="tableView" destination="tST-0v-Na1" id="mdG-fE-m28"/>
+                        <segue destination="HV9-6B-vWa" kind="show" identifier="prepareForEditor" id="fOa-0R-PzH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="117"/>
+        </scene>
+        <!--Editor View Controller-->
+        <scene sceneID="VbS-tY-U3m">
+            <objects>
+                <viewController id="HV9-6B-vWa" customClass="EditorViewController" customModule="iOSEditorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DPf-f4-72L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LKR-bh-nV7">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="Sk2-dh-fad">
+                                        <barButtonItem key="leftBarButtonItem" title="Exit" id="95T-75-wP5">
+                                            <connections>
+                                                <action selector="exitButtonTapped:" destination="HV9-6B-vWa" id="tIr-JR-Eav"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem systemItem="save" id="UTb-iB-RUE">
+                                                <connections>
+                                                    <action selector="saveButtonTapped:" destination="HV9-6B-vWa" id="dNm-3r-0OS"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="redo" id="Rlk-rC-Vad">
+                                                <connections>
+                                                    <action selector="redoButtonTapped:" destination="HV9-6B-vWa" id="JFy-gi-hcO"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="undo" id="lO5-U5-Wzd">
+                                                <connections>
+                                                    <action selector="undoButtonTapped:" destination="HV9-6B-vWa" id="T1X-XU-knX"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="onf-sV-MDG">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LKR-bh-nV7" firstAttribute="trailing" secondItem="gQ9-gJ-CzT" secondAttribute="trailing" id="QOm-ht-bEx"/>
+                            <constraint firstItem="gQ9-gJ-CzT" firstAttribute="trailing" secondItem="onf-sV-MDG" secondAttribute="trailing" id="cBh-cg-UeE"/>
+                            <constraint firstItem="LKR-bh-nV7" firstAttribute="top" secondItem="gQ9-gJ-CzT" secondAttribute="top" id="iw6-4a-it4"/>
+                            <constraint firstItem="gQ9-gJ-CzT" firstAttribute="bottom" secondItem="onf-sV-MDG" secondAttribute="bottom" id="npQ-PG-B2d"/>
+                            <constraint firstItem="onf-sV-MDG" firstAttribute="leading" secondItem="gQ9-gJ-CzT" secondAttribute="leading" id="oPl-Gj-jRf"/>
+                            <constraint firstItem="LKR-bh-nV7" firstAttribute="leading" secondItem="gQ9-gJ-CzT" secondAttribute="leading" id="s3o-86-S1T"/>
+                            <constraint firstItem="onf-sV-MDG" firstAttribute="top" secondItem="LKR-bh-nV7" secondAttribute="bottom" id="yEm-7S-JMm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gQ9-gJ-CzT"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="95T-75-wP5" id="pqd-z5-Rzu"/>
+                        <outlet property="navigationBar" destination="LKR-bh-nV7" id="1Jf-6U-LLh"/>
+                        <outlet property="navigationTitle" destination="Sk2-dh-fad" id="gMv-ss-nke"/>
+                        <outlet property="redoButton" destination="Rlk-rC-Vad" id="ILN-L6-BTL"/>
+                        <outlet property="saveButton" destination="UTb-iB-RUE" id="rts-GS-VoE"/>
+                        <outlet property="textView" destination="onf-sV-MDG" id="Lmj-rA-Asa"/>
+                        <outlet property="undoButton" destination="lO5-U5-Wzd" id="ljv-aU-yu8"/>
+                        <segue destination="LZJ-3E-Efo" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMain:" id="nAh-rS-kny"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxd-Ru-RK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LZJ-3E-Efo" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="119"/>
+        </scene>
+    </scenes>
+</document>

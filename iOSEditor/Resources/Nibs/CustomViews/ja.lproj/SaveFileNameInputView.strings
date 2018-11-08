@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Name is empty."; ObjectID = "7nB-GT-nYe"; */
+"7nB-GT-nYe.text" = "名前が空です。";
+
+/* Class = "UILabel"; text = "Message"; ObjectID = "FXY-mO-HU3"; */
+"FXY-mO-HU3.text" = "Message";
+
+/* Class = "UILabel"; text = "Save to"; ObjectID = "kXb-mT-1yE"; */
+"kXb-mT-1yE.text" = "ファイルを保存";
+
+/* Class = "UITextField"; placeholder = "Max 30 Characters"; ObjectID = "rCk-38-WY7"; */
+"rCk-38-WY7.placeholder" = "最大30文字まで";
